@@ -1,0 +1,40 @@
+.wrapper{
+    border: .1em solid red;
+    padding: 1em;
+    margin: 1em;
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr) repeat(2, 3fr);
+    gap: 1em;
+/*     layout mit grid template-areas definieren
+ */
+ grid-template-areas:
+ "logo   header   header"
+ "aside   main    main"
+ "aside   footer  footer";
+}
+
+.wrapper>*{
+    border: .1em solid;
+    background-color: lightsalmon;
+    padding: 1em;
+}
+
+.logo{
+    grid-area: logo;
+}
+
+header{
+    grid-area: header;
+}
+
+aside{
+    grid-area: aside;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
